@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shen Treratanakulchai — Curriculum Vitae</title>
+<meta name="description" content="Curriculum vitae of Shen Treratanakulchai, Lecturer in Biomedical Engineering at Mahidol University, working on soft robotics for minimally invasive surgery.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#131c24;
+    --paper:#f5f4ef;
+    --panel:#10202e;
+    --panel-ink:#e7ecf0;
+    --panel-ink-dim:#9fb1c0;
+    --line:#3b586b;
+    --rule:#dbd7cb;
+    --muted:#5b6672;
+    --brass:#a9822f;
+    --serif: 'Source Serif 4', Georgia, serif;
+    --sans: 'IBM Plex Sans', -apple-system, Segoe UI, Roboto, sans-serif;
+    --mono: 'IBM Plex Mono', 'Courier New', monospace;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:16px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  a{color:inherit;}
+
+  .layout{
+    display:grid;
+    grid-template-columns: 320px 1fr;
+    min-height:100vh;
+  }
+
+  /* ---------- SIDEBAR ---------- */
+  aside{
+    background:var(--panel);
+    color:var(--panel-ink);
+    padding:48px 36px;
+    position:sticky;
+    top:0;
+    height:100vh;
+    overflow-y:auto;
+    border-right:1px solid #0a1620;
+  }
+  aside::-webkit-scrollbar{width:6px;}
+  aside::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px;}
+
+  .name{
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:2.1rem;
+    line-height:1.1;
+    letter-spacing:-0.01em;
+    margin:0 0 6px;
+  }
+  .name em{
+    font-style:italic;
+    font-weight:400;
+    color:var(--panel-ink-dim);
+  }
+  .role{
+    font-size:0.94rem;
+    color:var(--panel-ink-dim);
+    margin:0 0 2px;
+  }
+  .subrole{
+    font-size:0.86rem;
+    color:var(--brass);
+    font-family:var(--mono);
+    margin:14px 0 28px;
+    letter-spacing:0.01em;
+  }
+
+  .contact-list{
+    list-style:none;
+    padding:0;
+    margin:0 0 34px;
+    font-family:var(--mono);
+    font-size:0.82rem;
+  }
+  .contact-list li{
+    padding:8px 0;
+    border-top:1px solid var(--line);
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+  }
+  .contact-list li:last-child{border-bottom:1px solid var(--line);}
+  .contact-list span.label{color:var(--panel-ink-dim);}
+  .contact-list a{text-decoration:none;}
+  .contact-list a:hover{color:var(--brass);}
+
+  nav.jump{
+    margin-bottom:34px;
+  }
+  nav.jump .head{
+    font-family:var(--mono);
+    font-size:0.72rem;
+    color:var(--panel-ink-dim);
+    margin-bottom:10px;
+  }
+  nav.jump ul{list-style:none;margin:0;padding:0;}
+  nav.jump li a{
+    display:block;
+    padding:6px 0;
+    font-size:0.9rem;
+    text-decoration:none;
+    color:var(--panel-ink);
+    border-left:2px solid transparent;
+    padding-left:10px;
+    margin-left:-12px;
+    transition:border-color .15s, color .15s;
+  }
+  nav.jump li a:hover{
+    border-left-color:var(--brass);
+    color:var(--brass);
+  }
+
+  .sidebar-block{margin-bottom:30px;}
+  .sidebar-block .head{
+    font-family:var(--mono);
+    font-size:0.72rem;
+    color:var(--panel-ink-dim);
+    margin-bottom:10px;
+  }
+  .sidebar-block p{
+    margin:0 0 6px;
+    font-size:0.88rem;
+    color:var(--panel-ink);
+  }
+  .sidebar-block .fine{
+    color:var(--panel-ink-dim);
+    font-size:0.8rem;
+  }
+
+  /* ---------- MAIN ---------- */
+  main{
+    padding:56px 64px 100px;
+    max-width:900px;
+  }
+
+  section{
+    margin-bottom:56px;
+    scroll-margin-top:24px;
+  }
+
+  h2.section-title{
+    font-family:var(--serif);
+    font-size:1.5rem;
+    font-weight:600;
+    margin:0 0 22px;
+    padding-bottom:10px;
+    border-bottom:2px solid var(--ink);
+    display:inline-block;
+  }
+
+  h3.sub{
+    font-family:var(--mono);
+    font-size:0.78rem;
+    color:var(--muted);
+    text-transform:none;
+    margin:26px 0 14px;
+    letter-spacing:0.02em;
+  }
+  h3.sub:first-of-type{margin-top:6px;}
+
+  /* timeline entries: education / positions */
+  .tl{
+    list-style:none;
+    margin:0;
+    padding:0;
+    border-left:1px solid var(--rule);
+  }
+  .tl li{
+    position:relative;
+    padding:2px 0 22px 28px;
+  }
+  .tl li::before{
+    content:"";
+    position:absolute;
+    left:-5px;
+    top:6px;
+    width:9px;
+    height:9px;
+    border-radius:50%;
+    background:var(--paper);
+    border:2px solid var(--ink);
+  }
+  .tl li.current::before{
+    background:var(--brass);
+    border-color:var(--brass);
+  }
+  .tl .yr{
+    font-family:var(--mono);
+    font-size:0.82rem;
+    color:var(--brass);
+    display:block;
+    margin-bottom:3px;
+  }
+  .tl .ttl{
+    font-weight:600;
+    margin:0 0 2px;
+  }
+  .tl .org{
+    font-style:italic;
+    color:var(--muted);
+  }
+  .tl .desc{
+    margin:6px 0 0;
+    font-size:0.93rem;
+    color:var(--ink);
+  }
+  .tl .desc + .desc{margin-top:3px;}
+  .tl .sup{
+    font-size:0.85rem;
+    color:var(--muted);
+    margin:3px 0 0;
+  }
+
+  /* research experience */
+  .lab{margin-bottom:30px;}
+  .lab .labname{font-weight:600;font-size:1.05rem;margin:0 0 2px;}
+  .lab .advisor{color:var(--muted);font-size:0.9rem;margin:0 0 14px;}
+  .lab .stint{margin-bottom:14px;padding-left:18px;border-left:2px solid var(--rule);}
+  .lab .stint .yr{font-family:var(--mono);font-size:0.8rem;color:var(--brass);}
+  .lab .stint .role-ttl{font-weight:600;margin:2px 0;}
+  .lab .stint .role-desc{font-size:0.92rem;color:var(--ink);margin:0;}
+
+  /* publications */
+  .pub-list{list-style:none;margin:0 0 8px;padding:0;}
+  .pub-list li{
+    display:grid;
+    grid-template-columns: 52px 1fr;
+    gap:16px;
+    padding:10px 0;
+    border-top:1px solid var(--rule);
+    font-size:0.94rem;
+  }
+  .pub-list li:last-child{border-bottom:1px solid var(--rule);}
+  .pub-list .yr{
+    font-family:var(--mono);
+    font-size:0.82rem;
+    color:var(--muted);
+    padding-top:2px;
+  }
+  .pub-list .cite b{font-weight:600;}
+  .pub-list .venue{font-style:italic;}
+
+  /* simple lists */
+  ul.plain{margin:0;padding:0;list-style:none;}
+  ul.plain li{
+    padding:9px 0;
+    border-top:1px solid var(--rule);
+    font-size:0.94rem;
+  }
+  ul.plain li:last-child{border-bottom:1px solid var(--rule);}
+  ul.plain .yr{
+    font-family:var(--mono);
+    font-size:0.8rem;
+    color:var(--brass);
+    margin-right:10px;
+  }
+
+  .patent-group{margin-bottom:18px;}
+  .patent-group .country{
+    font-family:var(--mono);
+    font-size:0.78rem;
+    color:var(--muted);
+    margin-bottom:8px;
+  }
+
+  /* skills grid */
+  .skills-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:22px 40px;
+  }
+  .skill-row{border-top:1px solid var(--rule);padding:12px 0;}
+  .skill-row .k{
+    font-family:var(--mono);
+    font-size:0.76rem;
+    color:var(--muted);
+    display:block;
+    margin-bottom:4px;
+  }
+  .skill-row .v{font-size:0.93rem;}
+
+  /* referees */
+  .referees{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:28px;
+  }
+  .ref-card{border-top:2px solid var(--ink);padding-top:12px;}
+  .ref-card .rname{font-weight:600;margin:0 0 2px;}
+  .ref-card .rtitle{font-size:0.88rem;color:var(--muted);margin:0;}
+  .ref-card .rnote{
+    font-family:var(--mono);
+    font-size:0.78rem;
+    color:var(--muted);
+    margin-top:8px;
+  }
+
+  footer{
+    padding:30px 64px 60px;
+    font-family:var(--mono);
+    font-size:0.78rem;
+    color:var(--muted);
+    max-width:900px;
+  }
+
+  @media (max-width:860px){
+    .layout{grid-template-columns:1fr;}
+    aside{position:relative;height:auto;border-right:none;border-bottom:1px solid #0a1620;}
+    main{padding:40px 24px 80px;}
+    footer{padding:20px 24px 50px;}
+    .skills-grid, .referees{grid-template-columns:1fr;}
+    .pub-list li{grid-template-columns:44px 1fr;}
+  }
+</style>
+</head>
+<body>
+
+<div class="layout">
+
+  <aside>
+    <p class="name">Shen<br><em>Treratanakulchai</em></p>
+    <p class="role">Lecturer, Biomedical Engineering<br>Mahidol University</p>
+    <p class="subrole">soft robotics · surgical devices · teleoperation</p>
+
+    <ul class="contact-list">
+      <li><span class="label">tel</span><a href="tel:+66650094155">+66 65 009 4155</a></li>
+      <li><span class="label">mail</span><a href="mailto:shen.tre@mahidol.ac.th">shen.tre@mahidol.ac.th</a></li>
+      <li><span class="label">github</span><a href="https://github.com/ShenTre" target="_blank" rel="noopener">ShenTre</a></li>
+      <li><span class="label">in</span><a href="#" target="_blank" rel="noopener">LinkedIn</a></li>
+    </ul>
+
+    <nav class="jump">
+      <p class="head">on this page</p>
+      <ul>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#positions">Positions</a></li>
+        <li><a href="#research">Research experience</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#patents">Patents</a></li>
+        <li><a href="#teaching">Teaching</a></li>
+        <li><a href="#awards">Awards &amp; recognition</a></li>
+        <li><a href="#public">Public engagement</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#funding">Research funding</a></li>
+        <li><a href="#referees">Referees</a></li>
+      </ul>
+    </nav>
+
+    <div class="sidebar-block">
+      <p class="head">languages</p>
+      <p>Thai — native</p>
+      <p>English — IELTS 6.5</p>
+    </div>
+
+    <div class="sidebar-block">
+      <p class="head">programming</p>
+      <p>C / C++ / C#, Python, Java</p>
+    </div>
+
+    <div class="sidebar-block">
+      <p class="head">also</p>
+      <p class="fine">Piano instructor, Trinity Guildhall &amp; Yamaha Music School</p>
+    </div>
+  </aside>
+
+  <main>
+
+    <section id="education">
+      <h2 class="section-title">Education</h2>
+      <ul class="tl">
+        <li>
+          <span class="yr">2017–2022</span>
+          <p class="ttl">PhD, Mechanical Engineering</p>
+          <p class="org">Imperial College London</p>
+          <p class="desc">Soft Robotics Teleoperation System for Minimally Invasive Surgery</p>
+          <p class="sup">Supervisors: Prof. Ferdinando Rodriguez y Baena, Dr. George Mylonas</p>
+        </li>
+        <li>
+          <span class="yr">2013–2015</span>
+          <p class="ttl">Master of Biomedical Engineering</p>
+          <p class="org">Mahidol University</p>
+          <p class="desc">Fusion Sensory Schemes for Real-Time Survivor Searching on Extreme-Terrain Rescue Robots: A Further Study from a Real Experience</p>
+          <p class="sup">Supervisors: Assoc. Prof. Jackrit Suthakorn, Asst. Prof. Songpol Ongwattanakul</p>
+        </li>
+        <li>
+          <span class="yr">2008–2012</span>
+          <p class="ttl">BEng, Biomedical Engineering — Distinction Program (2nd Honor)</p>
+          <p class="org">Mahidol University</p>
+          <p class="desc">Simulation and Image Reconstruction for Magnetic Resonance Imaging</p>
+          <p class="sup">Supervisors: Assoc. Prof. Jackrit Suthakorn, Dr. Udomchai Techavipoo, Prof. Pairash Thajchayapong</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="positions">
+      <h2 class="section-title">Positions</h2>
+      <ul class="tl">
+        <li class="current">
+          <span class="yr">2023–present</span>
+          <p class="ttl">Lecturer</p>
+          <p class="org">Department of Biomedical Engineering, Mahidol University</p>
+        </li>
+        <li class="current">
+          <span class="yr">2023–present</span>
+          <p class="ttl">Fellow</p>
+          <p class="org">BARTLAB, Mahidol University</p>
+        </li>
+        <li class="current">
+          <span class="yr">2023–present</span>
+          <p class="ttl">Secretary</p>
+          <p class="org">IEEE Region 10, Thailand</p>
+        </li>
+        <li>
+          <span class="yr">2022–2023</span>
+          <p class="ttl">Research Associate</p>
+          <p class="org">MIM Lab &amp; Hamlyn Centre, Imperial College London, UK</p>
+        </li>
+        <li>
+          <span class="yr">2015–2017</span>
+          <p class="ttl">Research Assistant</p>
+          <p class="org">BARTLAB, Mahidol University</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="research">
+      <h2 class="section-title">Research experience</h2>
+
+      <div class="lab">
+        <p class="labname">Mechatronics in Medicine Lab &amp; Hamlyn Centre, Imperial College London, UK</p>
+        <p class="advisor">Advisor: Dr. Ferdinando Rodriguez y Baena, Professor, Department of Mechanical Engineering, Imperial College London</p>
+        <div class="stint">
+          <span class="yr">2022</span>
+          <p class="role-ttl">Self-propelled soft robotic endoscopes for next-generation gastrointestinal surgery (ROBOGAST) — EPSRC research grant</p>
+          <p class="role-desc">Research Associate, Department of Mechanical Engineering. Mechanical design and control of a soft manipulator, soft growing robot, and soft sensing skin.</p>
+        </div>
+      </div>
+
+      <div class="lab">
+        <p class="labname">Center for Biomedical and Robotics Technology (BARTLAB)</p>
+        <p class="advisor">Advisor: Dr. Jackrit Suthakorn, Associate Professor, Department of Biomedical Engineering, Mahidol University</p>
+
+        <div class="stint">
+          <span class="yr">2015–2016</span>
+          <p class="role-ttl">Deep learning for human-part classification with thermal–RGB bimodality CNN</p>
+          <p class="role-desc">Developed and implemented a classification algorithm for search-and-rescue scenarios using a bi-modality CNN of thermal and RGB images.</p>
+        </div>
+        <div class="stint">
+          <span class="yr">2015–2016</span>
+          <p class="role-ttl">Robotic monofilament inspector for diabetic neuropathy screening</p>
+          <p class="role-desc">Designed electronics and control for the embedded system; conducted experimental study and system evaluation.</p>
+        </div>
+        <div class="stint">
+          <span class="yr">2015–2016</span>
+          <p class="role-ttl">Retrobulbar block of ophthalmic anesthesia practical simulator</p>
+          <p class="role-desc">Project management and medical-consult coordination. Designed a Hall-effect array sensing system for needle-tip tracking and magnetic-field modelling; ran usability studies; built a human-skin force-profile acquisition system for silicone artificial skin.</p>
+        </div>
+        <div class="stint">
+          <span class="yr">2014–2015</span>
+          <p class="role-ttl">BARTLAB LL-EXOSKELETON rehabilitation robots</p>
+          <p class="role-desc">Designed and developed motor-control electronics.</p>
+        </div>
+        <div class="stint">
+          <span class="yr">2007–2015</span>
+          <p class="role-ttl">National &amp; international competitions — Rescue Robot and Robot@Home</p>
+          <p class="role-desc">Designed electronics and sensing systems; developed victim-detection algorithms; team leader of the BARTLAB Rescue Robot at World RoboCup 2017; built autonomous navigation using laser scan and fuzzy logic control.</p>
+        </div>
+        <div class="stint">
+          <span class="yr">2009–2010</span>
+          <p class="role-ttl">Robotic drug storage and dispensing for hospital logistics</p>
+          <p class="role-desc">Designed drug-packaging sensing for conveyor, shelf, internal robot storage, warehouse, and delivery AGV robot.</p>
+        </div>
+        <div class="stint">
+          <span class="yr">2007–2008</span>
+          <p class="role-ttl">Closed intramedullary nailing of femur — surgical navigation</p>
+          <p class="role-desc">Experimental study and system evaluation; built image-processing to extract and label fiducial points for auto image calibration.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications">
+      <h2 class="section-title">Publications</h2>
+
+      <h3 class="sub">Journal articles</h3>
+      <ul class="pub-list">
+        <li>
+          <span class="yr">2023</span>
+          <span class="cite">Branesh M. Pillai, Peerapat Owatchaiyapong, <b>Treratanakulchai, Shen</b>, Dileep Sivaraman, Songpol Ongwattanakul, Jackrit Suthakorn. Lower limb exoskeleton with energy-storing mechanism for spinal cord injury rehabilitation. <span class="venue">IEEE Access</span>, vol. 11, pp. 133850–133866.</span>
+        </li>
+        <li>
+          <span class="yr">2021</span>
+          <span class="cite"><b>Treratanakulchai, Shen</b>, Ferdinando Rodriguez y Baena. A passive decoupling mechanism for misalignment compensation in master–slave teleoperation. <span class="venue">IEEE Transactions on Medical Robotics and Bionics</span>, vol. 3, pp. 285–288.</span>
+        </li>
+        <li>
+          <span class="yr">2019</span>
+          <span class="cite">Bing Li, Bruno Gil, Maura Power, Anzhu Gao, <b>Treratanakulchai, Shen</b>, Salzitsa Anastasova, Guang-Zhong Yang. Carbon-nanotube-coated 3D microspring force sensor for medical applications. <span class="venue">ACS Applied Materials &amp; Interfaces</span>, vol. 11, pp. 35577–35586. PMID: 31484477.</span>
+        </li>
+      </ul>
+
+      <h3 class="sub">Conference proceedings</h3>
+      <ul class="pub-list">
+        <li>
+          <span class="yr">2024</span>
+          <span class="cite"><b>Treratanakulchai, Shen</b>, Arnau Garriga-Casanovas, Korn Borvorntanajanya, Enrico Franco, Ferdinando Rodriguez y Baena. A novel soft robotic manipulator design with zig-zag chamber geometry. <span class="venue">2024 10th Int. Conf. on Automation, Robotics and Applications (ICARA)</span>, pp. 1–6.</span>
+        </li>
+        <li>
+          <span class="yr">2024</span>
+          <span class="cite">Pasit Komonsuwan, <b>Treratanakulchai, Shen</b>, Sorayouth Chumnanvej, Jackrit Suthakorn. Intra-operative trajectory realignment algorithm for minimizing pedicle screw misplacement in cervical spinal fusion. <span class="venue">2024 IEEE Int. Conf. on Robotics and Biomimetics (ROBIO)</span>, pp. 1–6.</span>
+        </li>
+        <li>
+          <span class="yr">2024</span>
+          <span class="cite">Patchawat Detasavanong, Yanisa Kao-ian, Khamic Srisutrapon, Pawanpas Ellen Welch, Natthakarn Paibunviriyakun, Taya Kitiyakara, <b>Treratanakulchai, Shen</b>. Artificial esophagus for measuring ballooning contacting pressure. <span class="venue">2024 IEEE Int. Conf. on Robotics and Biomimetics (ROBIO)</span>, pp. 1682–1687.</span>
+        </li>
+        <li>
+          <span class="yr">2024</span>
+          <span class="cite">Korn Borvorntanajanya, <b>Treratanakulchai, Shen</b>, Ferdinando Rodriguez y Baena, Enrico Franco. Model-based tracking control of a soft growing robot for colonoscopy. <span class="venue">IEEE Transactions on Medical Robotics and Bionics</span>, vol. 6, pp. 1354–1362.</span>
+        </li>
+        <li>
+          <span class="yr">2023</span>
+          <span class="cite"><b>Treratanakulchai, Shen</b>, Enrico Franco, Ferdinando Rodriguez y Baena. Model-free position control of a soft continuum manipulator in Cartesian space. <span class="venue">2023 Int. Conf. on Control, Automation and Diagnosis (ICCAD)</span>, pp. 1–6.</span>
+        </li>
+        <li>
+          <span class="yr">2023</span>
+          <span class="cite">Enrico Franco, Ayhan Aktas, <b>Treratanakulchai, Shen</b>, Arnau Garriga-Casanovas, Abdulhamit Donder, Ferdinando Rodriguez y Baena. Discrete-time model-based control of soft manipulator with FBG sensing. <span class="venue">2023 IEEE Int. Conf. on Robotics and Automation (ICRA)</span>, pp. 567–572.</span>
+        </li>
+        <li>
+          <span class="yr">2022</span>
+          <span class="cite"><b>Treratanakulchai, Shen</b>, Enrico Franco, Arnau Garriga-Casanovas, Minghao Hu, Panagiotis Kassanos, Ferdinando Rodriguez y Baena. Development of a 6-DOF soft robotic manipulator with integrated sensing skin. <span class="venue">2022 IEEE/RSJ Int. Conf. on Intelligent Robots and Systems (IROS)</span>, pp. 6944–6951.</span>
+        </li>
+        <li>
+          <span class="yr">2022</span>
+          <span class="cite">Arnau Garriga-Casanovas, <b>Treratanakulchai, Shen</b>, Enrico Franco, Emilia Zari, Varell Ferrandy, Vani Virdyawan, Ferdinando Rodriguez y Baena. Optimised design and performance comparison of soft robotic manipulators. <span class="venue">2022 7th Int. Conf. on Mechanical Engineering and Robotics Research (ICMERR)</span>, pp. 129–136.</span>
+        </li>
+        <li>
+          <span class="yr">2019</span>
+          <span class="cite">Andreas Schmitz, <b>Treratanakulchai, Shen</b>, Pierre Berthet-Rayne, Guang-Zhong Yang. A rolling-tip flexible instrument for minimally invasive surgery. <span class="venue">2019 Int. Conf. on Robotics and Automation (ICRA)</span>, pp. 379–385.</span>
+        </li>
+        <li>
+          <span class="yr">2016</span>
+          <span class="cite"><b>Treratanakulchai, Shen</b>, Jackrit Suthakorn. Needle tip position tracking for eye anesthesia practical simulator based on Hall-effect array sensor. <span class="venue">20th Annual Conf. of the Int. Society for Computer Aided Surgery (CARS)</span>.</span>
+        </li>
+        <li>
+          <span class="yr">2014</span>
+          <span class="cite"><b>Treratanakulchai, Shen</b>, Jackrit Suthakorn. Effective vital sign sensing algorithm and system for autonomous survivor detection in rough-terrain autonomous rescue robots. <span class="venue">2014 IEEE Int. Conf. on Robotics and Biomimetics (ROBIO)</span>, pp. 831–836.</span>
+        </li>
+      </ul>
+
+      <h3 class="sub">National conference</h3>
+      <ul class="pub-list">
+        <li>
+          <span class="yr">2012</span>
+          <span class="cite"><b>Treratanakulchai, Shen</b>, Jackrit Suthakorn, Udomchai Techavipoo, Pairash Thajchayapong. µ-MRI Simulation Tool Development: An MRI Simulation Tool Software Based on Bloch's Equation for Studying Magnetic Computing and Pulse Sequencing in MRI. <span class="venue">Proceedings of the 35th Electrical Engineering Conference (EECON-35)</span>, Pattaya, Thailand.</span>
+        </li>
+      </ul>
+    </section>
+
+    <section id="patents">
+      <h2 class="section-title">Patents</h2>
+
+      <div class="patent-group">
+        <p class="country">Thailand</p>
+        <ul class="plain">
+          <li>3D Localization Technique in Hall-Effect Magnetizing Tracking System <em>(pending)</em></li>
+          <li>Eye Anesthesia Practical Simulator for Ophthalmic Anesthesia <em>(pending)</em></li>
+        </ul>
+      </div>
+      <div class="patent-group">
+        <p class="country">United Kingdom</p>
+        <ul class="plain">
+          <li>No. 2011682.8 / GB / PRV — "Tendon Driven Joint Locking Mechanism for a Master Controller"</li>
+        </ul>
+      </div>
+      <div class="patent-group">
+        <p class="country">United States</p>
+        <ul class="plain">
+          <li>US20230241761A1 — "A Joint Locking Mechanism"</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="teaching">
+      <h2 class="section-title">Teaching</h2>
+
+      <h3 class="sub">Course instructor</h3>
+      <ul class="plain">
+        <li><span class="yr">2023–present</span>Biomechanics II — EGBI261</li>
+        <li><span class="yr">2024–present</span>Design in Biomedical Engineering — EGBI301</li>
+        <li><span class="yr">2023–present</span>Advanced Materials and Mechanics in Medicine — EGBE607/608</li>
+        <li><span class="yr">2023–present</span>Biomedical Engineering Lab I — EGBI201</li>
+      </ul>
+
+      <h3 class="sub">Teaching assistant</h3>
+      <ul class="plain">
+        <li><span class="yr">2021</span>Professional Engineering Skills — MECH50007, Imperial College London. Developed a mechatronics study kit for undergraduates.</li>
+        <li><span class="yr">2020–2021</span>Medical Robotics and Instrumentation — SURG70001, MRes course, Hamlyn Centre, Imperial College London</li>
+        <li><span class="yr">2015–2016</span>Biomedical Engineering Lab I — EGBE201. H-bridge circuit for motor control.</li>
+        <li><span class="yr">2015–2016</span>Introduction to Medical Robotics — EGBE481. Robot kinematics and control.</li>
+      </ul>
+    </section>
+
+    <section id="awards">
+      <h2 class="section-title">Awards &amp; recognition</h2>
+      <ul class="plain">
+        <li><span class="yr">2017</span>Royal Thai Government Scholarship</li>
+        <li><span class="yr">2016</span>Silver Award, BES-SEC Student's Design Competition, 16th Int. Conf. on Biomedical Engineering, Singapore</li>
+        <li><span class="yr">2016</span>International Society for Computer Aided Surgery (ISCAS) Travel Award</li>
+        <li><span class="yr">2015</span>Finalist, Rescue Robot League, World RoboCup, Hefei, China</li>
+        <li><span class="yr">2014</span>3rd Place, Rescue Robot Award, World RoboCup, João Pessoa, Brazil</li>
+        <li><span class="yr">2014</span>3rd Place, Rescue Robot Award, RoboCup Iran Open</li>
+        <li><span class="yr">2012</span>Biomedical Engineering Scholarship, Department of Biomedical Engineering, Mahidol University</li>
+        <li><span class="yr">2012</span>1st Runner-up, Rescue Robot Award, RoboCup Japan Open</li>
+        <li><span class="yr">2012</span>Best Technique, Robot@Home Award, Thailand Robot@Home Championship</li>
+        <li><span class="yr">2012</span>Best Autonomous Rescue Robot Award, Thailand Rescue Robot Championship</li>
+        <li><span class="yr">2011</span>Best Creativity Robot@Home Award, Thailand Robot@Home Championship</li>
+      </ul>
+    </section>
+
+    <section id="public">
+      <h2 class="section-title">Public engagement</h2>
+
+      <h3 class="sub">Invited talks</h3>
+      <ul class="plain">
+        <li><span class="yr">Feb 2024</span>3D Printing in Medical Applications — Monthly Talk, Siriraj Surgical Innovation Center</li>
+        <li><span class="yr">Jan 2024</span>Disruptive Technology for Longevity in the Post-Pandemic — Monthly Talk, Siriraj Surgical Innovation Center</li>
+        <li><span class="yr">Oct 2023</span>Biotechnology and Prolongation of Life — Dental Sociology, DTCM211</li>
+        <li><span class="yr">Sep 2023</span>Updates in Medical Robotics and Dental Applications — Comprehensive Treatment in Digital Dentistry, Digital Dentistry Association of Thailand</li>
+        <li><span class="yr">Jun 2023</span>Establishing a Soft Robotic Platform for LMIC — Workshop on Soft Robotics for Endoscopy and Endoluminal Surgery, Hamlyn Symposium 2023</li>
+        <li><span class="yr">May 2023</span>Medical Robotics — 1st Siriraj Surgical Innovation Forum 2023</li>
+        <li><span class="yr">Apr 2023</span>3D-Printing for Beginners and Medical Applications — Reinventing University Program workshop</li>
+        <li><span class="yr">Mar 2023</span>Soft Robotics for Minimally Invasive Surgery — Medical Robotics Seminar, Mahidol University, with IEEE RAS Thailand Chapter and the Reinventing University Program</li>
+      </ul>
+
+      <h3 class="sub">Research news</h3>
+      <ul class="plain">
+        <li><span class="yr">Jan 2023</span>BBC Thai interview on soft robotics research and PhD life at Imperial College London</li>
+        <li><span class="yr">Jun 2023</span>Coverage of the self-propelling robot endoscope developed to make bowel cancer screening more comfortable</li>
+      </ul>
+    </section>
+
+    <section id="skills">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-row"><span class="k">software</span><span class="v">MS Visual Studio, MATLAB, TensorFlow, Weka, OpenHaptics, OpenGL, LabVIEW</span></div>
+        <div class="skill-row"><span class="k">operating systems</span><span class="v">ROS, Windows, macOS, Linux</span></div>
+        <div class="skill-row"><span class="k">microcontrollers</span><span class="v">Arduino, dsPIC (Microchip), mbed</span></div>
+        <div class="skill-row"><span class="k">CAD</span><span class="v">SolidWorks, Altium</span></div>
+        <div class="skill-row" style="grid-column:1/-1;">
+          <span class="k">research instrumentation</span>
+          <span class="v">NDI Polaris Vicra, NDI Aurora, haptic devices (Phantom Omni Sensable, Omega7, TouchX), Yaskawa Motoman, tensile testing machine, Microsoft Kinect, ATI Nano17 force sensor, Maxon motors &amp; controllers, Hokuyo LIDAR (URG-04, UTM30), Xsens IMU, Optris 160 thermal camera, 3D printers (Objet24/260/500, ProJet 5600, Formlabs 2), ARTEC Spider 3D scanner, proportional regulator valves</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="funding">
+      <h2 class="section-title">Research funding</h2>
+
+      <h3 class="sub">National research grants</h3>
+      <ul class="plain">
+        <li><span class="yr">2024–2025</span>Thailand Science Research and Innovation, Fundamental Fund for Basic Research — "Feasibility study of a soft robotics manipulator for neurosurgery in hydrocephalus patients," £16,000</li>
+        <li><span class="yr">2023–2025</span>National Research Council of Thailand, Young Investigator Fund — "Development of a high-DOF soft robotic manipulator for minimally invasive surgery," £12,800</li>
+      </ul>
+
+      <h3 class="sub">Internal grants</h3>
+      <ul class="plain">
+        <li><span class="yr">2025</span>Mahidol University – University of Sussex Seed Fund (Year 2024) — "Teleoperated Soft Robotic Manipulator for Intraventricular Neuroendoscopic Surgery," £10,000</li>
+      </ul>
+
+      <h3 class="sub">Grant writing &amp; co-investigation</h3>
+      <ul class="plain">
+        <li><span class="yr">2019</span>RAEng / Newton Fund Industry–Academia Partnership Programme (IAPP1R2 100182) — "Establishing a partnership in medical robotics between a Thailand–UK research centre and an industrial partner," £36,000</li>
+        <li><span class="yr">2018–2019</span>British Council Thailand–UK Higher Education Partnerships</li>
+        <li><span class="yr">2017–2018</span>Transitional Research of Military Robots from Rescue Robots based on the Global Standardized Field Level for Enhancing Active Defence Strategy — Thailand OHEC, Co-PI, USD 147,000</li>
+        <li><span class="yr">2017–2018</span>Medical Device and Healthcare Innovations Development Hub — Mahidol University, Co-PI, USD 2,938,600</li>
+        <li><span class="yr">2017–2018</span>Intelligent Robotic Wheelchair for Elderly and Disabled Persons — Thailand Ministry of Science and Technology, Co-PI, USD 40,000</li>
+        <li><span class="yr">2014–2018</span>National Advanced Medical Robotics Center Project — Thailand Ministry of Science and Technology, Co-PI, USD 15,000,000</li>
+        <li><span class="yr">2013–2015</span>Intelligent Robotic Doctor for Diagnosis and Therapeutics via Telemedicine — Thailand Health Systems Research Institute, Co-PI, USD 200,000</li>
+        <li><span class="yr">2012–2013</span>Development of Prototype AGV Intelligent Mobile Robotic System for Drug Logistics in Hospitals — Thailand NRCT, Co-PI, USD 120,000</li>
+        <li><span class="yr">2009</span>Drug Logistic Robot Research and Development Project — Panasonic–Siriraj Hospital–Engineering, Thailand NRCT, Co-PI, USD 39,000</li>
+      </ul>
+    </section>
+
+    <section id="referees">
+      <h2 class="section-title">Referees</h2>
+      <div class="referees">
+        <div class="ref-card">
+          <p class="rname">Dr. Jackrit Suthakorn</p>
+          <p class="rtitle">Associate Professor, Department of Biomedical Engineering, Mahidol University</p>
+          <p class="rnote">contact available on request</p>
+        </div>
+        <div class="ref-card">
+          <p class="rname">Dr. Ferdinando Rodriguez y Baena</p>
+          <p class="rtitle">Professor, Department of Mechanical Engineering, Imperial College London, UK</p>
+          <p class="rnote">contact available on request</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  Shen Treratanakulchai — Curriculum Vitae · last updated 2026
+</footer>
+
+</body>
+</html>
